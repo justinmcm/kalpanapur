@@ -1,0 +1,833 @@
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #1a1a1a;
+    color: #ccc;
+    font-size: 12px; /* Reduced global font size */
+}
+
+
+
+
+
+
+/* Header Bar */
+.top-header {
+    background-color: #333;
+    color: #fff;
+    padding: 8px 15px; /* Reduced padding */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.top-nav a {
+    color: #fff;
+    margin-left: 10px;
+    text-decoration: none;
+    font-size: 12px; /* Reduced font size */
+}
+
+/* Layout */
+.layout {
+    display: flex;
+}
+
+/* Left Sidebar */
+.left-sidebar {
+    width: 200px; /* Reduced width */
+    background-color: #222;
+    padding: 5px; /* Reduced padding */
+    height: 100vh;
+    overflow-y: auto;
+}
+
+.player-stats, .main-nav {
+    margin-bottom: 15px; /* Reduced spacing */
+}
+
+.player-stats h2 {
+    font-size: 14px; /* Reduced font size */
+    color: #fff;
+}
+
+.player-stats p {
+    margin: 3px 0; /* Tighter spacing */
+    font-size: 12px; /* Reduced font size */
+}
+
+/* Sidebar Navigation */
+.main-nav h3 {
+    font-size: 12px; /* Reduced font size */
+    color: #ccc;
+    margin-top: 15px;
+    border-bottom: 1px solid #444;
+    padding-bottom: 3px;
+}
+
+.main-nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+.main-nav li {
+    margin: 5px 0; /* Reduced spacing */
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: #ccc;
+    padding: 6px 8px; /* Reduced padding */
+    background-color: #333;
+    display: block;
+    border-radius: 3px; /* Tighter radius */
+    text-align: left;
+    font-size: 12px; /* Reduced font size */
+    display: flex;
+    align-items: center;
+}
+
+.main-nav a:hover {
+    background-color: #444;
+    color: #fff;
+}
+
+.main-nav a:active {
+    background-color: #555;
+}
+
+/* Main Content */
+.content {
+    flex-grow: 1;
+    padding: 15px; /* Reduced padding */
+    background-color: #1a1a1a;
+    color: #fff;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 8px; /* Reduced padding */
+}
+
+/* Player Stats Section */
+.stat-bar {
+    margin: 5px 0; /* Reduced spacing between bars */
+}
+
+.stat-bar p {
+    font-size: 11px; /* Reduced font size */
+    margin: 0 0 3px 0; /* Tighter spacing */
+    color: #ccc;
+}
+
+.bar {
+    width: 100%;
+    height: 6px; /* Shorter height for bars */
+    background-color: #444;
+    border-radius: 3px; /* Tighter radius */
+    overflow: hidden;
+    position: relative;
+}
+
+.bar .fill {
+    height: 100%;
+    border-radius: 3px;
+}
+
+/* Login Page Styles */
+.login-container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #222;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    color: #ccc;
+    text-align: center;
+}
+
+.login-header {
+    margin-bottom: 20px;
+}
+
+.login-banner {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.login-form input {
+    padding: 8px;
+    border: 1px solid #444;
+    border-radius: 5px;
+    background-color: #333;
+    color: #ccc;
+}
+
+.login-form button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #444;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.login-form button:hover {
+    background-color: #555;
+}
+
+.error-message {
+    color: #ff4444;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+/* Stats Container (Shared for Stats, Working Stats, and Money) */
+.stats-container {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #222;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    color: #ccc;
+    width: 200px;
+}
+
+.stats-container p {
+    margin: 10px 0;
+    font-size: 14px;
+}
+
+.stats-container h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+/* Grid Layout for Stats */
+.content-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+/* Shared Stats Container Styling */
+.stats-container {
+    padding: 15px;
+    background-color: #222;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    color: #ccc;
+}
+
+
+.job-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 16px;
+    text-align: left;
+    color: #ccc;
+    background-color: #333;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.job-table th, .job-table td {
+    padding: 10px;
+    border: 1px solid #444;
+}
+
+.job-table th {
+    background-color: #444;
+    font-weight: bold;
+}
+
+.job-table tr:hover {
+    background-color: #555;
+}
+
+.apply-button {
+    background-color: #32CD32;
+    color: #fff;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.apply-button:hover {
+    background-color: #28a428;
+}
+
+
+.job-info {
+    margin: 20px 0;
+    padding: 15px;
+    background-color: #222;
+    color: #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.job-info h3 {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.job-info p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+
+
+
+
+
+
+
+/* Jail Page Styles */
+.jail-action-btn {
+    display: inline-block;
+    padding: 6px 12px;
+    margin: 5px 5px 10px 0;
+    background-color: #333;
+    color: #fff;
+    border: 1px solid #444;
+    border-radius: 3px;
+    font-size: 14px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.jail-action-btn:hover {
+    background-color: #444;
+    color: #ddd;
+}
+
+.jail-action-btn:active {
+    background-color: #555;
+    color: #ccc;
+}
+
+
+
+
+/* Crime Container */
+.crime-container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 10px;
+    background-color: #222;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    color: #ccc;
+    text-align: center;
+}
+
+/* Crime Category Buttons */
+.crime-category {
+    margin: 10px 0;
+}
+
+.crime-category-header {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    color: #fff;
+    background-color: #444;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.crime-category-header:hover {
+    background-color: #555;
+}
+
+/* Back Button */
+.back-button {
+    margin: 10px 0;
+    padding: 8px 15px;
+    font-size: 14px;
+    color: #fff;
+    background-color: #ff440000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+
+/* Compact Table */
+.crime-table.compact {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    margin: 10px 0;
+    background-color: #333;
+}
+
+.crime-table.compact th,
+.crime-table.compact td {
+    padding: 5px;
+    text-align: center;
+}
+
+.crime-table.compact th {
+    background-color: #444;
+    color: #fff;
+}
+
+.crime-table.compact tr:nth-child(even) {
+    background-color: #2a2a2a;
+}
+
+.crime-table.compact tr:nth-child(odd) {
+    background-color: #1e1e1e;
+}
+
+/* Attempt Button */
+.attempt-button {
+    padding: 5px 10px;
+    font-size: 12px;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.attempt-button:hover {
+    background-color: #0056b3;
+}
+
+/* Notification */
+.notification {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border: 1px solid #444;
+    font-size: 14px;
+}
+
+
+
+
+
+
+.notification {
+    margin: 15px 0;
+    padding: 15px;
+    border-radius: 5px;
+    background-color: #2a2a2a;
+    color: white;
+    font-size: 14px;
+    border: 1px solid #444;
+}
+
+.result-success {
+    color: #4CAF50; /* Green for success */
+}
+
+.result-failure {
+    color: #F44336; /* Red for failure */
+}
+
+.result-critical-failure {
+    color: #FF5722; /* Orange for critical failure */
+}
+
+
+
+
+
+.course-progress-bar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.course-progress-bar .bar {
+    width: 300px;
+    height: 15px;
+    background-color: #ddd;
+    border: 1px solid #000;
+    border-radius: 5px;
+    position: relative;
+}
+
+.course-progress-bar .bar .fill {
+    height: 100%;
+    background-color: #4caf50; /* Unique color for course progress */
+    border-radius: 5px;
+}
+
+
+/* Inventory Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+table th, table td {
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+
+table th {
+    background-color: #333;
+    color: #fff;
+}
+
+/*table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}*/
+
+table tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Button Styling */
+button {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+
+
+
+
+/* Bank Page Styles */
+h1, h2 {
+    text-align: left;
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+form input, form button {
+    margin: 5px 0;
+}
+
+form input {
+    padding: 5px;
+    width: 200px;
+}
+
+form button {
+    padding: 5px 10px;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #555;
+}
+
+
+
+
+/* NPC Section */
+.npc-section {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+    background-color: #333; /* Match the dark theme */
+    border-bottom: 2px solid #444;
+    color: #fff; /* White text for dark background */
+}
+
+.npc {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    cursor: pointer;
+    padding: 10px;
+    background-color: #444; /* Darker background for NPC cards */
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.npc:hover {
+    background-color: #555; /* Highlight on hover */
+}
+
+.npc-photo {
+    width: 50px;
+    height: 50px;
+    background-color: #666;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    margin-right: 10px; /* Space between photo and text */
+}
+
+.npc-details {
+    flex-grow: 1;
+}
+
+.npc-name {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.npc-interaction {
+    display: none; /* Initially hidden */
+    padding: 10px;
+    background-color: #555;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+/* Show expanded interaction */
+.npc.open .npc-interaction {
+    display: block;
+}
+
+
+.container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+/* Subtle hover effect for table rows */
+table tbody tr:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Slightly lighter background */
+    cursor: pointer; /* Optional: Makes the rows feel interactive */
+}
+
+
+
+
+
+
+
+
+
+
+/* Global Style for the Banner */
+.banner {
+    position: relative;
+    width: 100%;
+    max-height: 300px;
+    overflow: hidden;
+}
+
+.banner img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-bottom: 0px solid #444; /* Optional border for separation */
+}
+
+/* Global Style for the Banner Title */
+.banner-title {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    margin: 0;
+    font-size: 2rem;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    background: rgba(0, 0, 0, 0.5); /* Optional semi-transparent background */
+    padding: 10px 15px; /* Padding for better readability */
+    border-radius: 5px; /* Rounded corners for the background */
+}
+
+
+
+
+
+
+
+
+
+/* General table styling */
+.properties-table {
+    width: 80%; /* Reduce the width for smaller tables */
+    margin: 0 auto 15px; /* Center the table with margin for spacing */
+    border-collapse: collapse;
+    font-size: 12px; /* Reduce font size for compact look */
+    font-family: Arial, sans-serif;
+    background-color: #2b2b2b;
+    color: #fff;
+}
+
+/* Table headers */
+.properties-table th {
+    background-color: #444;
+    padding: 6px; /* Reduced padding */
+    text-align: center;
+    border-bottom: 2px solid #555;
+    font-size: 13px; /* Slightly larger for better visibility */
+}
+
+/* Table cells */
+.properties-table td {
+    padding: 4px 6px; /* Compact padding for cells */
+    text-align: center;
+    border-bottom: 1px solid #444;
+}
+
+/* Alternate row colors for better readability */
+.properties-table tr:nth-child(even) {
+    background-color: #333;
+}
+
+.properties-table tr:nth-child(odd) {
+    background-color: #2b2b2b;
+}
+
+/* Table row hover effect */
+.properties-table tr:hover {
+    background-color: #555;
+    cursor: pointer;
+}
+
+/* Action buttons inside tables */
+.action-button {
+    padding: 3px 6px; /* Smaller buttons */
+    font-size: 11px; /* Smaller text */
+    font-family: Arial, sans-serif;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+/* Specific button styles */
+.action-button.buy {
+    background-color: #28a745;
+}
+
+.action-button.vacate {
+    background-color: #dc3545;
+}
+
+.action-button.move-in {
+    background-color: #007bff;
+}
+
+/* Button hover effect */
+.action-button:hover {
+    opacity: 0.85;
+}
+
+/* Headings */
+h1.page-title {
+    font-size: 1.6rem; /* Slightly smaller title */
+    color: #fff;
+    text-align: center;
+    margin: 15px 0; /* Compact margin */
+    font-weight: 600;
+}
+
+h2 {
+    font-size: 1.2rem; /* Reduced font size */
+    color: #ddd;
+    margin-bottom: 8px;
+    text-align: center;
+}
+
+/* Section styling */
+.properties-section {
+    display: flex;
+    flex-direction: column; /* Stack tables vertically for compact layout */
+    align-items: center;
+    gap: 15px;
+}
+
+.user-properties, .available-properties {
+    width: 90%; /* Reduce width for smaller appearance */
+}
+
+
+
+
+
+/* Highlight class for dynamically highlighted buttons */
+.highlight {
+    color: #fff; /* White text color */
+    background-color: #ff4500; /* Orange background */
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+/* Optional: Add hover effects for the highlight */
+.highlight:hover {
+    background-color: #ff6347; /* Lighter orange on hover */
+    text-decoration: underline;
+}
+
+.highlight {
+    color: #fff !important;
+    background-color: #ff4500 !important;
+}
